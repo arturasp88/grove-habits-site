@@ -1,1 +1,239 @@
-<!doctype html><meta charset="utf-8"><title>Grove Habits</title><meta http-equiv="refresh" content="0; url=https://grove-app.bearblog.dev/"><link rel="canonical" href="https://grove-app.bearblog.dev/"><p><a href="https://grove-app.bearblog.dev/">Grove Habits</a></p>
+<!doctype html>
+<html lang="en" data-layout="landing">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Grove Habits: keep a habit, grow a world</title>
+    <meta name="description" content="A habit tracker for Android. Every day you keep opens a new piece of land on a floating island of your own. Free on Google Play soon." />
+    <meta property="og:title" content="Grove Habits: keep a habit, grow a world" />
+    <meta property="og:description" content="A habit tracker for Android. Every day you keep opens a new piece of land on a floating island of your own." />
+    <meta property="og:image" content="./media/share.jpg" />
+    <meta name="theme-color" content="#d7e7d2" />
+    <link rel="icon" href="./favicon.svg" />
+    <link rel="preload" as="image" href="./media/hero-phone.webp" media="(max-width: 699px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="./media/hero-wide.webp" media="(min-width: 700px)" fetchpriority="high" />
+    <link rel="preload" href="./fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+    <script type="module" crossorigin src="./assets/index-Bm5qEhCU.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/kit-CjM7H-d7.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-7azQ-6es.css">
+  </head>
+  <body>
+    <header class="bar" id="bar">
+      <a class="mark" href="#top" aria-label="Grove Habits, back to the top">Grove Habits</a>
+      <nav class="bar-links" aria-label="On this page">
+        <a href="#how">How it works</a>
+        <a href="#five-worlds">Worlds</a>
+        <a href="#price">Price</a>
+        <a href="#faq">Questions</a>
+      </nav>
+      <a class="btn btn-small" href="#join">Join</a>
+    </header>
+
+    <main id="top">
+      <!-- the first screen: the grove itself, live; it stays put while the page slides up over it -->
+      <div class="top">
+      <section class="hero" aria-labelledby="title">
+        <picture>
+          <source media="(min-width: 700px)" srcset="media/hero-wide.webp" />
+          <img id="poster" src="./media/hero-phone.webp" alt="" />
+        </picture>
+        <canvas id="world" aria-label="A floating island covered in trees, ponds and small buildings, turning slowly. Drag it to spin it; tap a building or a piece of land to see what it is."></canvas>
+        <div class="hero-copy">
+          <h1 id="title">Keep a habit. <br />Grow a world.</h1>
+          <p class="hero-sub">A habit tracker for Android. Every day you keep opens a new piece of land on an island of your own.</p>
+          <a class="btn" href="#join">Join the first twelve</a>
+          <p class="hero-fine">Free on Google Play soon</p>
+        </div>
+        <nav id="worlds" hidden></nav>
+        <div id="pins"></div>
+        <p id="hint" class="growing">Growing the island</p>
+        <aside id="info" aria-live="polite" hidden></aside>
+      </section>
+      </div>
+
+      <div class="sheet">
+        <section class="sec intro">
+          <p class="statement reveal">Tick a habit and it is planted. Keep the day and your island grows.</p>
+          <ul class="facts reveal" aria-label="In short">
+            <li>Free</li>
+            <li>No account</li>
+            <li>No ads</li>
+            <li>No subscription</li>
+          </ul>
+        </section>
+
+        <section class="sec" id="how" aria-labelledby="how-h">
+          <div class="head">
+            <h2 id="how-h" class="reveal">A minute a day.</h2>
+            <p class="lede reveal">Open it, tick what you did, watch it land. These are the app's own screens.</p>
+          </div>
+          <ol class="steps">
+            <li class="step reveal">
+              <p class="tag">Step 1</p>
+              <h3>Choose what to keep</h3>
+              <p>Yes-or-no habits, counts to a target, or limits to stay under. Every day, on set days, or a few times a week.</p>
+              <div class="stage stage-sage">
+                <div class="phone"><img src="./media/app-habit.webp" width="1081" height="2341" loading="lazy" alt="The habit screen: Meditate, 12 days kept, with its milestones at 7, 21, 50 and 100 days" /></div>
+              </div>
+            </li>
+            <li class="step reveal">
+              <p class="tag">Step 2</p>
+              <h3>Tick it off</h3>
+              <p>One tap. Part of the way still counts: three glasses of eight is three glasses grown.</p>
+              <div class="stage stage-gold stage-foot">
+                <div class="phone"><img src="./media/app-today.webp" width="1081" height="2341" loading="lazy" alt="The Today sheet: Drink water at 3 of 8, Read, Walk, Less coffee, Move, and Meditate ticked" /></div>
+              </div>
+            </li>
+            <li class="step reveal">
+              <p class="tag">Step 3</p>
+              <h3>Watch it land</h3>
+              <p>Each habit plants its own thing on today's ground: a cherry tree, a pond, a bench. The day closes and the land is yours.</p>
+              <div class="stage stage-rose">
+                <div class="phone"><img src="./media/app-island.webp" width="1081" height="2341" loading="lazy" alt="The island on day 14, with one of four habits kept so far today" /></div>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section class="field field-dark" id="why" aria-labelledby="why-h">
+          <div class="head">
+            <h2 id="why-h" class="reveal">An island, not a streak chart.</h2>
+            <p class="lede reveal">Five things it does that a row of ticks cannot.</p>
+          </div>
+          <ul class="cards" tabindex="0" aria-label="What makes it different. Swipe sideways for more.">
+            <li class="card reveal">
+              <img src="./media/close-day.webp" width="900" height="720" loading="lazy" alt="The island seen close: cherry trees, ponds and flowerbeds, each planted by a habit" />
+              <h3>Every habit plants its own thing.</h3>
+              <p>You choose what each habit grows and the colour of its flowers. Look across the island and you can see which habits made it.</p>
+            </li>
+            <li class="card reveal">
+              <img src="./media/close-meadow.webp" width="900" height="720" loading="lazy" alt="An open patch of meadow among the planted days" />
+              <h3>A missed day is a quiet meadow.</h3>
+              <p>Never a punishment. Nothing you have grown is ever taken away, and you can put yesterday right the next morning.</p>
+            </li>
+            <li class="card reveal">
+              <img src="./media/close-monument.webp" width="900" height="720" loading="lazy" alt="A day's land with what its habits raised there, among benches and flowers" />
+              <h3>Keep at it and a monument goes up.</h3>
+              <div class="days" role="img" aria-label="At 7, 21, 50 and 100 days"><span>7</span><span>21</span><span>50</span><span>100</span></div>
+              <p>At 7, 21 and 50 days, what a habit plants grows a size bigger. At each of those, and at 100, it raises a monument.</p>
+            </li>
+            <li class="card reveal">
+              <img src="./media/close-village.webp" width="900" height="720" loading="lazy" alt="A beacon tower, a great hall and a river among the trees" />
+              <h3>Your habits build a village.</h3>
+              <p>Keeping habits earns the coin the island runs on. Spend it on sixteen buildings, from a campfire to a beacon tower.</p>
+            </li>
+            <li class="card card-plain reveal">
+              <h3>A day is worth the same, however long your list.</h3>
+              <p>Each day shares one fixed amount of growth between your habits. Ten small ones earn no more than three real ones, so there is nothing to gain by padding the list.</p>
+            </li>
+          </ul>
+          <p class="more reveal"><a class="btn btn-light" href="#join">Join the first twelve</a></p>
+        </section>
+
+        <section class="sec" id="five-worlds" aria-labelledby="worlds-h">
+          <div class="head">
+            <h2 id="worlds-h" class="reveal">Five worlds. One island.</h2>
+            <p class="lede reveal">Switch whenever you like. Everything you have grown and built comes with you.</p>
+          </div>
+          <ul class="worlds" tabindex="0" aria-label="The five worlds. Swipe sideways for more.">
+            <li class="reveal"><img src="./media/land-grove.webp" width="900" height="900" loading="lazy" alt="The island as a green grove of cherry and oak in morning light" /><h3>Grove</h3><p>Included</p></li>
+            <li class="reveal"><img src="./media/land-mars.webp" width="900" height="900" loading="lazy" alt="The same island as a Mars colony: red ground, domed buildings" /><h3>Mars</h3><p>US$2.99</p></li>
+            <li class="reveal"><img src="./media/land-moon.webp" width="900" height="900" loading="lazy" alt="The same island as a Moon base: pale dust, crystals, a black sky" /><h3>Moon</h3><p>US$2.99</p></li>
+            <li class="reveal"><img src="./media/land-empire.webp" width="900" height="900" loading="lazy" alt="The same island as an ancient empire: palms, sandstone, a warm sky" /><h3>Empire</h3><p>US$2.99</p></li>
+            <li class="reveal"><img src="./media/land-frontier.webp" width="900" height="900" loading="lazy" alt="The same island as a frontier outpost: glowing plants under a violet sky" /><h3>Frontier</h3><p>US$2.99</p></li>
+          </ul>
+        </section>
+
+        <section class="sec" id="film" aria-labelledby="film-h">
+          <div class="head">
+            <h2 id="film-h" class="reveal">Watch it grow.</h2>
+            <p class="lede reveal">Half a minute of the real thing, from bare ground to a village.</p>
+          </div>
+          <div class="film reveal">
+            <video controls muted playsinline preload="none" poster="./media/film-poster.jpg" width="1920" height="1080" aria-label="A short film of Grove Habits: an island growing from bare ground, the app's own screens, and the five worlds">
+              <source src="./media/grove-habits.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </section>
+
+        <section class="sec" id="price" aria-labelledby="price-h">
+          <div class="head">
+            <h2 id="price-h" class="reveal">Free, and the Grove comes whole.</h2>
+            <p class="lede reveal">A world only changes how the island looks. Nothing a habit, a streak or the village can do is ever behind a purchase.</p>
+          </div>
+          <dl class="spec reveal">
+            <div><dt>The app, every feature</dt><dd>Free</dd></div>
+            <div><dt>The Grove world</dt><dd>Included</dd></div>
+            <div><dt>One more world</dt><dd>US$2.99 <small>once</small></dd></div>
+            <div><dt>All four more</dt><dd>US$7.99 <small>once</small></dd></div>
+            <div><dt>Ads</dt><dd>None</dd></div>
+            <div><dt>Subscription</dt><dd>None</dd></div>
+            <div><dt>Account</dt><dd>None</dd></div>
+          </dl>
+          <p class="fine reveal">Prices are for the United States; Google Play shows the price in your own currency. Your habits stay on your phone: there is no sign-in, and we cannot see them.</p>
+        </section>
+
+        <section class="sec" id="faq" aria-labelledby="faq-h">
+          <div class="head">
+            <h2 id="faq-h" class="reveal">Questions.</h2>
+          </div>
+          <div class="faq">
+            <details class="reveal">
+              <summary>Is it really free?</summary>
+              <p>Yes. Every feature and every habit is free, in the Grove world. Mars, Moon, Empire and Frontier are optional, bought once, and only change how the island looks.</p>
+            </details>
+            <details class="reveal">
+              <summary>When is it out?</summary>
+              <p>Soon, on Google Play. There is no date yet. The first twelve get in before anyone else, and everyone on the list gets one email the day it is out.</p>
+            </details>
+            <details class="reveal">
+              <summary>Is there an iPhone version?</summary>
+              <p>Not at present. Grove Habits is made for Android phones.</p>
+            </details>
+            <details class="reveal">
+              <summary>Do I need an account?</summary>
+              <p>No. There is no sign-in. Your habits are kept on your phone and we cannot see them.</p>
+            </details>
+            <details class="reveal">
+              <summary>What happens when I miss a day?</summary>
+              <p>That day's land stays a quiet meadow. Nothing you have grown is taken away, and you can put yesterday right the next morning.</p>
+            </details>
+            <details class="reveal">
+              <summary>What do the first twelve have to do?</summary>
+              <p>Install the test version from Google Play, use it as you normally would for a fortnight, and tell us what works and what does not.</p>
+            </details>
+          </div>
+        </section>
+
+        <section class="field field-gold" id="join" aria-labelledby="join-h">
+          <div class="head">
+            <h2 id="join-h" class="reveal">The first twelve get every world.</h2>
+            <p class="lede reveal">Twelve places in the closed test on Google Play. Each comes with a code that unlocks Mars, Moon, Empire and Frontier, free, for good.</p>
+          </div>
+          <form class="signup reveal" id="signup" action="" method="post" data-endpoint="" novalidate>
+            <label class="sr" for="email">Your email address</label>
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@gmail.com" required />
+            <button class="btn" type="submit">Join the first twelve</button>
+            <p class="signup-say" id="signup-say" role="status" aria-live="polite"></p>
+          </form>
+          <p class="fine reveal">Use the email of the Google account on your Android phone: that is the address Google Play will let in. You get one email with your invitation and your code, and one when the app is out. Nothing else.</p>
+          <ul class="gets reveal">
+            <li>An invitation to the closed test, before anyone else</li>
+            <li>A code for all four extra worlds, free, for good</li>
+            <li>A say in what the app becomes</li>
+          </ul>
+        </section>
+
+        <footer class="foot">
+          <p class="foot-name" aria-hidden="true">Grove Habits</p>
+          <p class="foot-links"><a href="https://grove-app.bearblog.dev/blog/">Blog</a><a href="#faq">Questions</a><a href="#join">Join the first twelve</a></p>
+          <p class="fine">Grove Habits is a tool for keeping habits. It is not a medical device and does not diagnose, treat, cure or prevent any medical condition. Google Play is a trademark of Google LLC.</p>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>
